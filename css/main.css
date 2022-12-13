@@ -55,6 +55,15 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  cursor: pointer;
+}
+.plan-options .option:hover {
+  border: 0.1rem solid hsl(213deg, 96%, 18%);
+  background: rgba(173, 190, 255, 0.1);
+}
+.plan-options .option.active {
+  border: 0.1rem solid hsl(213deg, 96%, 18%);
+  background: rgba(173, 190, 255, 0.1);
 }
 .plan-options .option .logo {
   height: 50px;
@@ -86,18 +95,21 @@
   background: hsl(213deg, 96%, 18%);
   border-radius: 1rem;
   position: relative;
+  border: none;
+  cursor: pointer;
 }
-.plan-paying .btn-plan-paying::before {
-  content: "";
+.plan-paying .btn-plan-paying-circle {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 0.3rem;
   width: 1.5rem;
-  aspect-ratio: 1;
+  height: 1.5rem;
   border-radius: 50%;
   background: hsl(0deg, 0%, 100%);
-  cursor: pointer;
+}
+.plan-paying .btn-plan-paying-circle.active {
+  left: 2.2rem;
 }
 .plan-paying .paying-option {
   font-weight: 500;
@@ -207,6 +219,28 @@
   color: hsl(243deg, 100%, 62%);
   font-weight: 700;
   font-size: 1.5rem;
+}
+
+.greetings {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+.greetings div {
+  text-align: center;
+}
+.greetings div .title {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: hsl(213deg, 96%, 18%);
+  margin: 1rem 0rem;
+}
+.greetings div .message {
+  color: hsl(231deg, 11%, 63%);
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-weight: 500;
 }
 
 * {

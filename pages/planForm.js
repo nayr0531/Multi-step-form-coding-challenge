@@ -30,9 +30,11 @@ export const planForm = () => {
 
         <div class="plan-paying">
           <span class="paying-option monthly active">Monthly</span>
-          <span class="btn-plan-paying"></span>
+          <button class="btn-plan-paying">
+          <span class="btn-plan-paying-circle"></span>
+          </button>
           <span class="paying-option yearly">Yearly</span>
-        </div>
+        </button>
     
       <button class="btn-plan-goback btn-goback">Go Back</button>  
       <button class="btn-plan step-form-btn">Next Step</button>  

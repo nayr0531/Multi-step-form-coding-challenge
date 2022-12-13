@@ -11,6 +11,15 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    cursor: pointer;
+    &:hover {
+      border: 0.1rem solid $primary-color;
+      background: rgba($active-color, 0.1);
+    }
+    &.active {
+      border: 0.1rem solid $primary-color;
+      background: rgba($active-color, 0.1);
+    }
     .logo {
       height: 50px;
       width: 50px;
@@ -41,19 +50,23 @@
     background: $primary-color;
     border-radius: 1rem;
     position: relative;
-    &::before {
-      content: "";
+    border: none;
+    cursor: pointer;
+    &-circle {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       left: 0.3rem;
       width: 1.5rem;
-      aspect-ratio: 1;
+      height: 1.5rem;
       border-radius: 50%;
       background: $text-color-5;
-      cursor: pointer;
+      &.active {
+        left: 2.2rem;
+      }
     }
   }
+
   .paying-option {
     font-weight: $font-weight-2;
     color: $text-color-1;

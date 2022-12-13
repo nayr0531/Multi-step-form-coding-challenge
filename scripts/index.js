@@ -2,11 +2,12 @@ import personalInfoForm from "../pages/personalInfoForm.js";
 import planForm from "../pages/planForm.js";
 import addsOnForm from "../pages/addsOnForm.js";
 import summaryForm from "../pages/summaryForm.js";
+import greetings from "../pages/greetings.js";
 
 const btnCircles = document.querySelectorAll(".btn-circle");
 
 const mainSection = document.querySelector(".main-section");
-mainSection.innerHTML = personalInfoForm;
+mainSection.innerHTML = planForm;
 const inputList = document.querySelectorAll("input");
 const check = (inputs) => {
   inputs.forEach((input) => {
@@ -30,49 +31,81 @@ btnCircles.forEach((btnCircle, index) => {
 
 const btnPersonalInfo = document.querySelector(".btn-personal-info");
 btnPersonalInfo?.addEventListener("click", () => {
-  // const error = document.querySelectorAll(".error");
+  const error = document.querySelectorAll(".error");
   let valid = true;
-  // inputList.forEach((input, index) => {
-  //   if (index === 0) {
-  //     if (!input.value.length) {
-  //       error[index].classList.add("active");
-  //       input.classList.add("invalid");
-  //       valid = false;
-  //     } else {
-  //       error[index].classList.remove("active");
-  //       input.classList.remove("invalid");
-  //       valid = true;
-  //     }
-  //   }
-  //   if (index === 1) {
-  //     if (!input.value.length) {
-  //       error[index].classList.add("active");
-  //       input.classList.add("invalid");
-  //       valid = false;
-  //     } else {
-  //       error[index].classList.remove("active");
-  //       input.classList.remove("invalid");
-  //       valid = true;
-  //     }
-  //   }
-  //   if (index === 2) {
-  //     if (!input.value.length) {
-  //       error[index].classList.add("active");
-  //       input.classList.add("invalid");
-  //       valid = false;
-  //     } else {
-  //       error[index].classList.remove("active");
-  //       input.classList.remove("invalid");
-  //       valid = true;
-  //     }
-  //   }
-  // });
+  inputList.forEach((input, index) => {
+    if (index === 0) {
+      if (!input.value.length) {
+        error[index].classList.add("active");
+        input.classList.add("invalid");
+        valid = false;
+      } else {
+        error[index].classList.remove("active");
+        input.classList.remove("invalid");
+        valid = true;
+      }
+    }
+    if (index === 1) {
+      if (!input.value.length) {
+        error[index].classList.add("active");
+        input.classList.add("invalid");
+        valid = false;
+      } else {
+        error[index].classList.remove("active");
+        input.classList.remove("invalid");
+        valid = true;
+      }
+    }
+    if (index === 2) {
+      if (!input.value.length) {
+        error[index].classList.add("active");
+        input.classList.add("invalid");
+        valid = false;
+      } else {
+        error[index].classList.remove("active");
+        input.classList.remove("invalid");
+        valid = true;
+      }
+    }
+  });
 
   if (valid) {
+    btnCircles[0].classList.remove("active");
     btnCircles[1].classList.add("active");
     mainSection.innerHTML = planForm;
     planFormFunc();
   }
+});
+
+const planOptions = document.querySelectorAll(".plan-options .option");
+
+planOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    planOptions.forEach((option) => {
+      option.classList.remove("active");
+    });
+
+    option.classList.add("active");
+  });
+});
+
+const btnPlanPaying = document.querySelector(".btn-plan-paying");
+
+btnPlanPaying.addEventListener("click", () => {
+  const btnCircle = btnPlanPaying.querySelector(".btn-plan-paying-circle");
+  btnCircle.classList.toggle("active");
+
+  const payingOption = document.querySelectorAll(".paying-option");
+
+  if (payingOption[0].classList.contains("active")) {
+    payingOption[0].classList.remove("active");
+    payingOption[1].classList.add("active");
+  } else {
+    payingOption[0].classList.add("active");
+    payingOption[1].classList.remove("active");
+  }
+
+  //Take a break next = "Working on dynamic 2 months free"
 });
 
 const planFormFunc = () => {
@@ -91,5 +124,3 @@ const addsOnFunc = () => {
     mainSection.innerHTML = summaryForm;
   });
 };
-
-// const btnCircles = document.querySelectorAll(".btn-circle");
