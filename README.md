@@ -33,8 +33,8 @@ To be follow.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/nayr0531/Multi-step-form-coding-challenge.git)
-- Live Site URL: [Add live site URL here](https://nayr0531.github.io/Multi-step-form-coding-challenge/)
+- Solution URL: [Codes](https://github.com/nayr0531/Multi-step-form-coding-challenge.git)
+- Live Site URL: [Preview](https://nayr0531.github.io/Multi-step-form-coding-challenge/)
 
 ## My process
 
