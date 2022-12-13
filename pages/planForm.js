@@ -1,12 +1,4 @@
-import addsOnForm from "./addsOnForm.js";
-
 export const planForm = () => {
-  // const btnPlan = document.querySelector(".btn-plan");
-  // console.log(btnPlan);
-  // btnPlan?.addEventListener("click", function () {
-  //   alert("Test");
-  // });
-
   return `
     <div class="plan-form step-form">
       <h1 class="step-form-title">Select your plan</h1>
@@ -35,12 +27,12 @@ export const planForm = () => {
             </div>
           </div>
         </div>
+
         <div class="plan-paying">
           <span class="paying-option monthly active">Monthly</span>
           <span class="btn-plan-paying"></span>
           <span class="paying-option yearly">Yearly</span>
-        
-          </div>
+        </div>
     
       <button class="btn-plan-goback btn-goback">Go Back</button>  
       <button class="btn-plan step-form-btn">Next Step</button>  

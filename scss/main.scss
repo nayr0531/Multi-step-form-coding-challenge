@@ -1,4 +1,5 @@
-@import "./config", "./personalForm", "./planForm", "./mobile-responsiveness";
+@import "./config", "./personalForm", "./planForm", "./addsonForm",
+  "./summaryForm", "./mobile-responsiveness";
 //reset all margin,padding into 0
 * {
   margin: 0;
@@ -78,6 +79,7 @@ body {
         height: 100%;
         &-title {
           color: $primary-color;
+          font-size: 2rem;
         }
         &-instruction {
           color: $text-color-1;

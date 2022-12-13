@@ -1,0 +1,38 @@
+.adds-on-option {
+  margin: 3rem 0rem;
+  display: grid;
+  gap: 1rem;
+  .option {
+    border: 0.1rem solid $text-color-1;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    input {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    div {
+      margin: 0rem 1.5rem;
+      .adds-on-title {
+        display: block;
+        font-weight: $font-weight-3;
+        color: $primary-color;
+        margin-bottom: 0.3rem;
+        font-size: 1.2rem;
+      }
+      .adds-on-description {
+        color: $text-color-1;
+        font-size: 1rem;
+      }
+    }
+
+    .cost {
+      font-weight: $font-weight-2;
+      color: $color;
+      position: absolute;
+      right: 1.5rem;
+    }
+  }
+}

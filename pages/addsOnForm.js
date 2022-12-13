@@ -32,7 +32,7 @@ export const addsOnForm = () => {
             </div>
             <span class="cost">+$2/mo</span>
           </div>
-        </div>
+      </div>
 
       <button class="btn-plan-goback btn-goback">Go Back</button>  
       <button class="btn-adds-on step-form-btn">Next Step</button>

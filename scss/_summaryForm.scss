@@ -1,0 +1,62 @@
+.paying-form {
+  background: rgba($active-color, 0.2);
+  border-radius: 0.5rem;
+  padding: 0rem 2rem;
+  margin: 2rem 0rem;
+  .summary-plan-cost {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid rgba($text-color-1, 0.3);
+    padding-bottom: 1rem;
+    .summary-title {
+      margin: 1.5rem 0rem;
+      .duration {
+        display: block;
+        color: $primary-color;
+        font-weight: $font-weight-3;
+      }
+      .btn-change {
+        color: $text-color-1;
+        text-decoration: underline;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 0.3rem;
+      }
+    }
+    .plan-price {
+      color: $primary-color;
+      font-weight: $font-weight-3;
+    }
+  }
+  .summary-addson-cost {
+    padding-bottom: 1rem;
+    .addson {
+      margin: 1.5rem 0rem;
+      display: flex;
+      justify-content: space-between;
+      &-title {
+        color: $text-color-1;
+        font-weight: $font-weight-2;
+      }
+      .cost {
+        color: $primary-color;
+        font-weight: $font-weight-2;
+      }
+    }
+  }
+}
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+  div {
+    color: $text-color-1;
+    font-weight: $font-weight-1;
+  }
+  &-cost {
+    color: $color;
+    font-weight: $font-weight-3;
+    font-size: 1.5rem;
+  }
+}
