@@ -1,0 +1,64 @@
+.plan-options {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0rem;
+  .option {
+    border: 0.1rem solid rgba($text-color-1, 0.7);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 10.5rem;
+    height: 11.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .logo {
+      height: 50px;
+      width: 50px;
+    }
+    .plan-title {
+      color: $primary-color;
+      font-weight: $font-weight-2;
+      display: block;
+      margin: 0.3rem 0rem;
+    }
+    .cost {
+      color: $text-color-1;
+    }
+  }
+}
+.plan-paying {
+  background: rgba($active-color, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  .btn-plan-paying {
+    display: inline-block;
+    width: 4rem;
+    height: 2rem;
+    background: $primary-color;
+    border-radius: 1rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0.3rem;
+      width: 1.5rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: $text-color-5;
+      cursor: pointer;
+    }
+  }
+  .paying-option {
+    font-weight: $font-weight-2;
+    color: $text-color-1;
+  }
+  .paying-option.active {
+    color: $primary-color;
+  }
+}

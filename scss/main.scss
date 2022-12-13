@@ -1,0 +1,128 @@
+@import "./config", "./personalForm", "./planForm", "./mobile-responsiveness";
+//reset all margin,padding into 0
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $text-font;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: $background-color;
+}
+.container {
+  max-width: 1440px;
+  display: grid;
+  place-items: center;
+  background: $text-color-5;
+  border-radius: 0.5rem;
+  margin: 3rem;
+  main {
+    display: flex;
+    padding: 1rem;
+    .sidebar-section {
+      height: 40rem;
+      width: 20rem;
+      background: url("../assets/images/bg-sidebar-desktop.svg") center;
+      border-radius: 0.5rem;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2.5rem;
+      .sidebar {
+        .step {
+          display: flex;
+          align-items: center;
+          margin-bottom: 2rem;
+          .btn-circle {
+            width: 3rem;
+            height: 3rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            border: 0.13rem solid $active-color;
+            display: grid;
+            place-items: center;
+            font-weight: $font-weight-3;
+            color: $text-color-5;
+            cursor: pointer;
+          }
+          .btn-circle.active {
+            background: $background-color;
+            color: $primary-color;
+          }
+          .btn-label {
+            margin-left: 1rem;
+            span {
+              display: block;
+              margin: 0.1rem;
+            }
+            &-step {
+              color: $text-color-2;
+            }
+            &-title {
+              color: $text-color-4;
+              font-weight: $font-weight-3;
+            }
+          }
+        }
+      }
+    }
+    .main-section {
+      padding: 3rem 6rem 0rem 6rem;
+      .step-form {
+        min-width: 34rem;
+        position: relative;
+        height: 100%;
+        &-title {
+          color: $primary-color;
+        }
+        &-instruction {
+          color: $text-color-1;
+        }
+        &-title,
+        &-instruction {
+          margin: 0.5rem 0rem;
+        }
+        .btn-goback {
+          position: absolute;
+          bottom: 3rem;
+          left: 0;
+          font-weight: $font-weight-3;
+          background: none;
+          outline: none;
+          border: none;
+          color: $text-color-1;
+          font-size: 1rem;
+          &:hover {
+            color: $primary-color;
+            font-weight: $font-weight-3;
+            cursor: pointer;
+          }
+        }
+        &-btn {
+          padding: 1rem 2rem;
+          color: $text-color-5;
+          font-weight: $font-weight-2;
+          background: $primary-color;
+          border-radius: 0.5rem;
+          outline: none;
+          cursor: pointer;
+          border: none;
+          position: absolute;
+          right: 0;
+          bottom: 2rem;
+          font-size: 1rem;
+          &:hover {
+            background: lighten($primary-color, 10%);
+          }
+          &:active {
+            background: $active-color;
+          }
+        }
+      }
+    }
+  }
+}
